@@ -1,0 +1,5 @@
+moilanej@Mubuntu:~/dev/docker-course$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+moilanej@Mubuntu:~/dev/docker-course$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+moilanej@Mubuntu:~/dev/docker-course$ 

@@ -1,0 +1,6 @@
+~/dev/docker-course$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+1a866d3cd15e        nginx               "nginx -g 'daemon of…"   49 seconds ago      Exited (0) 11 seconds ago                       tender_williamson
+fbdfd4e02669        nginx               "nginx -g 'daemon of…"   50 seconds ago      Exited (0) 4 seconds ago                        hungry_poitras
+ecb05dceefe1        nginx               "nginx -g 'daemon of…"   52 seconds ago      Up 51 seconds               80/tcp              jolly_yalow
+
