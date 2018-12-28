@@ -1,0 +1,17 @@
+moilanej@Mubuntu:~/dev/docker-course$ docker run -d --rm -it --name ubuntu ubuntu:16.04 sh -c 'apt-get update && apt-get install -y curl && read website; sleep 3; curl http://$website;'
+92ea7b3c50903b23773190c483e27758b345221206ba8a240f847429e2ffca64
+
+moilanej@Mubuntu:~/dev/docker-course$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+92ea7b3c5090        ubuntu:16.04        "sh -c 'apt-get upda…"   10 seconds ago      Up 9 seconds                            ubuntu
+
+moilanej@Mubuntu:~/dev/docker-course$ docker attach ubuntu --sig-proxy=false
+helsinki.fi
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
