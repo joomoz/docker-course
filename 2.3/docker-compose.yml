@@ -1,0 +1,32 @@
+version: '3.5'  
+
+services: 
+  front: 
+    build: ../1.5/frontend-example-docker/
+    image: frontend
+    ports: 
+      - 5000:5000
+    environment:
+      - API_URL=http://localhost:8000
+  back: 
+    build: ../1.6/backend-example-docker/
+    image: backend
+    ports: 
+      - 8000:8000
+    environment: 
+      - FRONT_URL=http://localhost:5000
+      - REDIS=redis
+      - DB_USERNAME=admin
+      - DB_PASSWORD=admin
+      - DB_NAME=postgres_db
+      - DB_HOST=db 
+    volumes:
+      - ../1.6/backend-example-docker/logs.txt:/mydir/logs.txt
+  redis:
+    image: redis
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres_db
