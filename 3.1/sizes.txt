@@ -1,0 +1,7 @@
+OLD         SIZE
+backend     343MB
+frontend    417MB
+
+NEW
+backend     337MB
+frontend    337MB
